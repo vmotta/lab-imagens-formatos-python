@@ -1,0 +1,56 @@
+name: Entrega do laboratório
+description: Registre o link do notebook concluído.
+title: "[ENTREGA] Nome do estudante"
+labels: ["entrega"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preencha os campos abaixo e confira se o notebook pode ser acessado pelo professor.
+
+  - type: input
+    id: integrantes
+    attributes:
+      label: Integrantes
+      description: Informe o nome completo de cada integrante.
+      placeholder: Nome completo
+    validations:
+      required: true
+
+  - type: input
+    id: notebook
+    attributes:
+      label: Link do notebook
+      description: Cole o link compartilhável da cópia executada no Google Colab ou no seu fork.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: foto_web
+    attributes:
+      label: Formato escolhido para fotografia web
+      options:
+        - JPEG
+        - PNG
+        - WebP
+        - TIFF
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    id: conclusao
+    attributes:
+      label: Conclusão principal
+      description: Resuma a principal evidência obtida no experimento.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmacao
+    attributes:
+      label: Confirmação
+      options:
+        - label: Executei todas as células e mantive as respostas no notebook.
+          required: true
