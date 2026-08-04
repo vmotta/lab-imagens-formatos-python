@@ -1,0 +1,34 @@
+name: Dúvida sobre o laboratório
+description: Relate um problema técnico ou conceitual.
+title: "[DÚVIDA] Resumo do problema"
+labels: ["duvida"]
+body:
+  - type: dropdown
+    id: etapa
+    attributes:
+      label: Etapa do laboratório
+      options:
+        - Configuração
+        - Inspeção da imagem
+        - Conversão de formatos
+        - Compressão JPEG
+        - MSE e PSNR
+        - Transparência
+        - SVG
+        - Entrega
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: Explique o que você tentou, o que esperava e o que aconteceu.
+    validations:
+      required: true
+
+  - type: textarea
+    id: erro
+    attributes:
+      label: Mensagem de erro ou saída relevante
+      render: shell
