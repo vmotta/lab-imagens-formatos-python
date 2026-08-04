@@ -1,0 +1,41 @@
+name: Validar laboratório
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Verificar sintaxe
+        run: python -m py_compile src/*.py
+
+      - name: Validar notebook
+        run: |
+          python - <<'PY'
+          import nbformat
+          notebook = nbformat.read(
+              "notebooks/laboratorio_formatos_imagens.ipynb",
+              as_version=4,
+          )
+          nbformat.validate(notebook)
+          print("Notebook válido.")
+          PY
+
+      - name: Executar testes
+        run: pytest -q
