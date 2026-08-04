@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Material e instruções
+    url: https://github.com/vmotta/lab-imagens-formatos-python
+    about: Consulte o README e o enunciado antes de abrir uma dúvida.
