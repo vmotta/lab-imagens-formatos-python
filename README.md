@@ -66,7 +66,7 @@ jupyter notebook notebooks/laboratorio_formatos_imagens.ipynb
 
 A entrega principal é o notebook preenchido. Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para o fluxo recomendado com GitHub e [docs/RUBRICA.md](docs/RUBRICA.md) para os critérios.
 
-## Materiais do professor
+## Guia para realizar o laboratório
 
 - [Enunciado da atividade](docs/ENUNCIADO.md)
 - [Guia de aplicação em 50 minutos](docs/GUIA_PROFESSOR.md)
